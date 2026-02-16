@@ -1,11 +1,108 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import ThemeToggle from "../components/ThemeToggle.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<main
+		class="max-w-[625px] mx-auto pt-20 sm:pt-35 px-6 flex flex-col items-start font-anonymous"
+	>
+		<div class="flex items-center justify-between w-full">
+			<div class="flex items-center">
+				<svg
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					class="text-primary"
+				>
+					<path
+						d="M9 6L15 12L9 18"
+						stroke="currentColor"
+						stroke-width="2.5"
+						stroke-linecap="round"
+						stroke-linejoin="round"></path>
+				</svg>
+				<h1 class="text-xl font-bold">Deep</h1>
+			</div>
+			<ThemeToggle />
+		</div>
+
+		<div class="mt-12 w-full">
+			<h2 class="text-xs font-thin mb-1">About</h2>
+			<p class="leading-relaxed text-sm">
+				Second year Computer Science student building at the
+				intersection of tech and finance. Founding intern at <a
+					class="text-primary"
+					href="https://www.ganthiyalabs.xyz/"
+					target="_blank"
+					rel="noopener noreferrer">Ganthiyalabs.</a
+				>
+			</p>
+			<h2 class="text-xs font-thin mb-1 pt-8">Work</h2>
+			<p class="leading-relaxed text-sm">
+				<a
+					class="text-primary"
+					href="https://www.ganthiyalabs.xyz/"
+					target="_blank"
+					rel="noopener noreferrer">lasect</a
+				> - building the a-z control plane for postgres
+			</p>
+			<p class="leading-relaxed text-sm">
+				<a
+					class="text-primary"
+					href="https://www.kaifu.fi/"
+					target="_blank"
+					rel="noopener noreferrer">kaifu</a
+				> - liquidity aggregator for prediction markets
+			</p>
+
+			<h2 class="text-xs font-thin mb-1 pt-8">Projects</h2>
+			<p class="leading-relaxed text-sm">
+				<a
+					class="text-primary"
+					href="https://github.com/ganthiyalabs/brothenticator"
+					target="_blank"
+					rel="noopener noreferrer">brothenticator</a
+				> - building the a-z control plane for postgres
+			</p>
+			<p class="leading-relaxed text-sm">
+				<a
+					class="text-primary"
+					href="https://github.com/byedeep/gurl-lang"
+					target="_blank"
+					rel="noopener noreferrer">gurl-lang</a
+				> - Custom minimal programming language using Gen Z Slang keywords
+			</p>
+			<p class="leading-relaxed text-sm">
+				<a
+					class="text-primary"
+					href="https://github.com/metfin/dlmm-sdk-go"
+					target="_blank"
+					rel="noopener noreferrer">dlmm-sdk-go</a
+				> - Golang SDK for Meteora's Dynamic Liquidity Market Maker
+			</p>
+			<h2 class="text-xs font-thin mb-1 pt-8">links</h2>
+			<p class="leading-relaxed text-sm flex flex-row gap-5">
+				<a
+					class="text-primary"
+					href="https://x.com/byedeeep"
+					target="_blank"
+					rel="noopener noreferrer">X</a
+				>
+				<a class="text-primary" href="mailto:deep@byedeep.me">email</a>
+				<a
+					class="text-primary"
+					href="https://github.com/byedeep"
+					target="_blank"
+					rel="noopener noreferrer">GitHub</a
+				>
+			</p>
+		</div>
+	</main>
 </Layout>

@@ -21,3 +21,10 @@
 		height: 100%;
 	}
 </style>
+<!-- src/layouts/Layout.astro -->
+<script is:inline>
+	const theme = localStorage.theme;
+	if (theme === "dark") {
+		document.documentElement.classList.add("dark");
+	}
+</script>
